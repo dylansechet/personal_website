@@ -25,16 +25,16 @@ about: |
   I received my Master's degree from CentraleSupélec.
 
 research: |
-  My research focuses on building lightweight and explainable neural network for music source separation.
+  My work focuses on building lightweight and explainable neural network for music source separation.
   I'm exploring topics such as unrolling, time-frequency decompositions and matrix decompositions.
 
 news:
   - date: "03/25"
-    text: "Our paper on Sparse Bayesian learning was accepted at SampTA."
+    text: "My paper on Sparse Bayesian learning was accepted at SampTA!"
   - date: "09/24"
-    text: "Presented our work on Hierarchical Models for instrument tagging at DAFx."
+    text: "I've presented my work on Hierarchical Models for instrument tagging at DAFx."
   - date: "08/24"
-    text: "Started work at LISN as a research engineer, building a toolbox for inverse problems in M/EEG."
+    text: "I've just started work at LISN as a research engineer, building a toolbox for inverse problems in M/EEG."
 
 publications:
   - title: "Revisiting CHAMPAGNE: Sparse Bayesian Learning as Reweighted Sparse Coding"
