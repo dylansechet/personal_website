@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
+    <meta name="description" content={{description}}>
     <meta name="keywords" content={{keywords}}>
     <meta name="author" content={{name}}>
     <meta property="og:title" content={{og_card.title | default: title}}>
@@ -14,7 +14,6 @@
     <title>{{title}}</title>
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;500;600&display=swap">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 
@@ -26,16 +25,16 @@
             {%if socials%}
             <div class="social-links-header">
                 {%if socials.scholar%}
-                <a href={{scholar}}><i class="fas fa-graduation-cap"></i>Google Scholar</a>
+                <a href={{scholar}}><i class="fa-solid fa-graduation-cap icon"></i>Google Scholar</a>
                 {%endif%}
                 {%if socials.linkedin%}
-                <a href={{linkedin}}><i class="fab fa-linkedin"></i>Linkedin</a>
+                <a href={{linkedin}}><i class="fa-brands fa-linkedin icon"></i>Linkedin</a>
                 {%endif%}
                 {%if socials.github%}
-                <a href={{github}}><i class="fab fa-github"></i>GitHub</a>
+                <a href={{github}}><i class="fa-brands fa-github icon"></i>GitHub</a>
                 {%endif%}
                 {%if socials.email%}
-                <a href="mailto:{{ email }}"><i class="fas fa-envelope"></i>Email</a>
+                <a href="mailto:{{ email }}"><i class="fa-solid fa-envelope icon"></i>Email</a>
                 {%endif%}
             </div>
             {%endif%}
@@ -111,10 +110,9 @@
         <p>© 2025 Dylan Sechet. Last updated: {{ page.date | monthDate}}.</p>
     </footer>
 
-    <div id="imageModal" class="modal">
-        <span class="modal-close" onclick="closeModal()">&times;</span>
-        <img class="modal-content" id="modalImage">
-    </div>
+    {% getBundle "fontawesome" %}
 </body>
+
+
 
 </html>

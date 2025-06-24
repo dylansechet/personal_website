@@ -2,7 +2,7 @@
 layout: base
 date: Last Modified
 title: Dylan Sechet | PhD Student at LISN
-# description: "Dylan Sechet's homepage" # Shown by search engine under title
+description: "Dylan Sechet | PhD Student at LISN"
 keywords: "Computer Science, PhD Student, Research, Machine Learning, Music Source Separation" # Can help SEO
 og_card:
   title: "Dylan Sechet | PhD Student at LISN"
