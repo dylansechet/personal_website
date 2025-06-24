@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content={{keywords}}>
+    <meta name="author" content={{name}}>
+    <meta property="og:title" content={{og_card.title | default: title}}>
+    <meta property="og:description" content={{og_card.description | default: description}}>
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="#">
+    <title>{{title}}</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;500;600&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body id="top">
+    <header>
+        <div class="header-content">
+            <h1>{{name}}</h1>
+            <p>{{affiliation | markdownify}}</p>
+            {%if socials%}
+            <div class="social-links-header">
+                {%if socials.scholar%}
+                <a href={{scholar}}><i class="fas fa-graduation-cap"></i>Google Scholar</a>
+                {%endif%}
+                {%if socials.linkedin%}
+                <a href={{linkedin}}><i class="fab fa-linkedin"></i>Linkedin</a>
+                {%endif%}
+                {%if socials.github%}
+                <a href={{github}}><i class="fab fa-github"></i>GitHub</a>
+                {%endif%}
+                {%if socials.email%}
+                <a href="mailto:{{ email }}"><i class="fas fa-envelope"></i>Email</a>
+                {%endif%}
+            </div>
+            {%endif%}
+
+        </div>
+        <div class="header-image">
+            <img src="static/images/avatar.jpg" alt="Profile Photo">
+        </div>
+    </header>
+
+    <main>
+        <section id="about">
+            {{about | markdownify }}
+        </section>
+        <section id="research">
+            <h2>Research</h2>
+            {{research | markdownify}}
+        </section>
+
+
+        {% if news %}
+        <section id="news">
+            <h2>News</h2>
+            <div class="news-container">
+                <ul class="news-list">
+                    {% for item in news %}
+                    <li>{{ item.date }}: {{ item.text | markdownify }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </section>
+        {% endif %}
+
+        {% if publications %}
+        {% include "publications" %}
+        {% endif %}
+
+
+        {% if awards %}
+        <section id="awards">
+            <h2>Awards</h2>
+            {%for item in awards %}
+            <div class="award-item">
+                <span class="award-year">{{ item.date }}</span>
+                <div class="award-desc">{{ item.text }}</div>
+            </div>
+            {%endfor%}
+        </section>
+        {% endif %}
+
+        {% if services %}
+        <section id="services">
+            <h2> Services </h2>
+            {% for service in services %}
+            <div class="service-category">
+                <div class="service-title">{{ service.title }}</div>
+                {{service.text | markdownify}}
+            </div>
+            {% endfor %}
+        </section>
+        {% endif %}
+
+        {%if misc %}
+        <section id="miscellaneous">
+            <h2>Miscellaneous</h2>
+            {{misc | markdownify}}
+        </section>
+        {% endif %}
+
+    </main>
+
+    <footer>
+        <p>© 2025 Dylan Sechet. Last updated: {{ page.date | monthDate}}.</p>
+    </footer>
+
+    <div id="imageModal" class="modal">
+        <span class="modal-close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+</body>
+
+</html>

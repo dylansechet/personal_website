@@ -1,0 +1,64 @@
+<section id="publications">
+    <div class="publications-header">
+        <h2 id="toggle-header">Selected Publications</h2>
+        <button id="toggle-publications" class="toggle-publications" onclick="togglePublications()">
+            Show All
+        </button>
+    </div>
+
+    <div id="publications-container">
+        {% for publication in publications %}
+        <div class="publication-item{% if publication.selected != 1 %} not-selected{% endif %}">
+            {% if publication.thumbnail %}
+            <div class="pub-thumbnail" onclick="openModal('{{ publication.thumbnail }}')">
+                <img src="{{ publication.thumbnail }}" alt="{{ publication.title }} thumbnail" />
+            </div>
+            {% endif %}
+            <div class="pub-content">
+                <div class="pub-title">{{ publication.title | markdownify }}</div>
+                <div class="pub-authors">{{ publication.authors | markdownify}}</div>
+                <div class="pub-venue-container">
+                    <div class="pub-venue">{{ publication.venue | markdownify}}</div>
+                    {% if publication.award %}
+                    <div class="pub-award">{{ publication.award }}</div>
+                    {% endif %}
+                </div>
+                <div class="pub-links">
+                    {% if publication.pdf %}
+                    <a href="{{ publication.pdf }}">[PDF]</a>
+                    {% endif %}
+                    {% if publication.code %}
+                    <a href="{{ publication.code }}">[Code]</a>
+                    {% endif %}
+                    {% if publication.project %}
+                    <a href="{{ publication.project }}">[Project Page]</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+<script>
+    let showingSelected = true;
+
+    function togglePublications() {
+        showingSelected = !showingSelected;
+        const container = document.getElementById('publications-container');
+        const items = container.querySelectorAll('.publication-item.not-selected');
+        const toggleHeader = document.getElementById('toggle-header');
+        const toggleButton = document.getElementById('toggle-publications');
+
+        items.forEach(item => {
+            item.style.display = showingSelected ? 'none' : '';
+        });
+
+        toggleHeader.textContent = showingSelected ? 'Selected Publications' : 'All Publications';
+        toggleButton.textContent = showingSelected ? 'Show All' : 'Show Selected';
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        togglePublications();
+    });
+</script>
