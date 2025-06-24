@@ -27,16 +27,16 @@
             {%if socials%}
             <div class="social-links-header">
                 {%if socials.scholar%}
-                <a href={{scholar}}><i class="fa-solid fa-graduation-cap icon"></i>Google Scholar</a>
+                <a href={{socials.scholar}}><i class="fa-solid fa-graduation-cap icon"></i>Google Scholar</a>
                 {%endif%}
                 {%if socials.linkedin%}
-                <a href={{linkedin}}><i class="fa-brands fa-linkedin icon"></i>Linkedin</a>
+                <a href={{socials.linkedin}}><i class="fa-brands fa-linkedin icon"></i>Linkedin</a>
                 {%endif%}
                 {%if socials.github%}
-                <a href={{github}}><i class="fa-brands fa-github icon"></i>GitHub</a>
+                <a href={{socials.github}}><i class="fa-brands fa-github icon"></i>GitHub</a>
                 {%endif%}
                 {%if socials.email%}
-                <a href="mailto:{{ email }}"><i class="fa-solid fa-envelope icon"></i>Email</a>
+                <a href="mailto:{{ socials.email }}"><i class="fa-solid fa-envelope icon"></i>Email</a>
                 {%endif%}
             </div>
             {%endif%}
