@@ -41,7 +41,7 @@ publications:
     authors: "**Dylan Sechet**, Matthieu Kowalski, Samy Mokhtari, Bruno Torresani"
     venue: "International Conference on Sampling Theory and Applications (SampTA), 2025"
     # award: "Best Paper"
-    selected: true
+    selected: 1
     thumbnail: "static/images/thumb_sampta.png"
     pdf: "static/papers/Sechet et al. - 2025 - Revisiting CHAMPAGNE Sparse Bayesian Learning as Reweighted Sparse Coding.pdf"
     code: "https://gitlab.inria.fr/dsechet/sbl_as_sparse_coding"
@@ -51,7 +51,7 @@ publications:
     authors: "**Dylan Sechet**, Francesca Bugiotti, Matthieu Kowalski, Edouard d'Hérouville, Filip Langiewicz"
     venue: "International Conference on Digital Audio Effects (DAFx), 2024"
     # award: "Best Paper"
-    selected: true
+    selected: 1
     thumbnail: "static/images/thumb_dafx.png"
     pdf: "static/papers/Sechet et al. - 2024 - A Hierarchical Deep Learning Approach for Minority Instrument Detection.pdf"
     code: "https://github.com/Seon82/musedetect"
