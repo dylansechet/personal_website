@@ -10,15 +10,15 @@
         {% for publication in publications %}
         <div class="publication-item{% if publication.selected != 1 %} not-selected{% endif %}">
             {% if publication.thumbnail %}
-            <div class="pub-thumbnail" onclick="openModal('{{ publication.thumbnail }}')">
+            <div class="pub-thumbnail">
                 <img src="{{ publication.thumbnail }}" alt="{{ publication.title }} thumbnail" />
             </div>
             {% endif %}
             <div class="pub-content">
-                <div class="pub-title">{{ publication.title | markdownify }}</div>
-                <div class="pub-authors">{{ publication.authors | markdownify}}</div>
+                <div class="pub-title">{{ publication.title | markdownify-inline }}</div>
+                <div class="pub-authors">{{ publication.authors | markdownify-inline}}</div>
                 <div class="pub-venue-container">
-                    <div class="pub-venue">{{ publication.venue | markdownify}}</div>
+                    <div class="pub-venue">{{ publication.venue | markdownify-inline}}</div>
                     {% if publication.award %}
                     <div class="pub-award">{{ publication.award }}</div>
                     {% endif %}

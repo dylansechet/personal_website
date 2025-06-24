@@ -7,6 +7,8 @@ export default async function (eleventyConfig) {
     // Filters
     const md = markdownIt({ html: true });
     eleventyConfig.addFilter('markdownify', content => md.render(content));
+    eleventyConfig.addFilter('markdownify-inline', content => md.renderInline(content));
+
     eleventyConfig.addFilter("monthDate", dateObj => {
         return DateTime.fromJSDate(dateObj).toFormat("LLLL yyyy"); // e.g., 24 June 2025
     });
