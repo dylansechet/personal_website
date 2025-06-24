@@ -7,6 +7,7 @@ keywords: "Computer Science, PhD Student, Research, Machine Learning, Music Sour
 og_card:
   title: "Dylan Sechet | PhD Student at LISN"
   # description: "Research in computer science and related fields"
+analytics: <script defer async src="https://umami.seonlabs.org/script.js" data-website-id="97ee5193-4012-4367-aa7c-6730a9706cdc"></script>
 
 name: Dylan Sechet
 affiliation: CS PhD Student • [LISN](https://www.lisn.upsaclay.fr/), Université Paris-Saclay
