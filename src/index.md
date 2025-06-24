@@ -11,7 +11,7 @@ og_card:
 name: Dylan Sechet
 affiliation: CS PhD Student • [LISN](https://www.lisn.upsaclay.fr/), Université Paris-Saclay
 socials:
-  scholar: "#"
+  scholar: "https://scholar.google.com/citations?user=KOCDQGYAAAAJ"
   github: "https://github.com/dylansechet"
   linkedin: "https://fr.linkedin.com/in/dylan-sechet-b219031a8"
   email: "dylan.sechet@inria.fr"
