@@ -65,38 +65,6 @@ h2 {
   letter-spacing: -0.01em;
 }
 
-/* Navigation */
-nav {
-  margin-top: 1.5rem;
-}
-
-nav ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.25rem;
-}
-
-nav a,
-.social-links-header a {
-  text-decoration: none;
-  color: var(--text-secondary);
-  transition: all var(--transition-time) ease;
-  font-weight: 400;
-  padding: 0.3rem 0.6rem;
-  border-radius: 4px;
-  display: inline-flex;
-  align-items: center;
-}
-
-nav a:hover,
-.social-links-header a:hover {
-  color: var(--accent-color);
-  background-color: rgba(74, 116, 185, 0.08);
-  transform: translateX(var(--animation-offset));
-}
-
 .social-links-header {
   display: flex;
   gap: 1.25rem;
@@ -394,65 +362,6 @@ strong {
   color: var(--accent-color);
 }
 
-/* Modal styles */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  padding-top: 100px;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.85);
-  transition: opacity var(--transition-time);
-  opacity: 0;
-}
-
-.modal.show {
-  opacity: 1;
-}
-
-.modal-content {
-  margin: auto;
-  display: block;
-  max-width: 85%;
-  max-height: 85%;
-  border-radius: 4px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-  animation: zoom var(--transition-time) ease-out;
-}
-
-@keyframes zoom {
-  from {
-    transform: scale(0.8);
-    opacity: 0;
-  }
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
-.modal-close {
-  position: absolute;
-  top: 15px;
-  right: 35px;
-  color: #f1f1f1;
-  font-size: 35px;
-  font-weight: normal;
-  cursor: pointer;
-  transition: color var(--transition-time);
-  opacity: 0.8;
-}
-
-.modal-close:hover {
-  color: #fff;
-  opacity: 1;
-  transform: scale(1.1);
-}
-
 /* Responsive design fixes */
 @media (max-width: 768px) {
   /* Make header stack vertically on mobile */
@@ -475,7 +384,6 @@ strong {
   .service-category:hover,
   .misc-item:hover,
   .news-list li:hover,
-  nav a:hover,
   .social-links-header a:hover,
   .pub-links a:hover {
     transform: none !important;
