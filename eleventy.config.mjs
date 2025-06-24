@@ -1,5 +1,6 @@
 import { DateTime } from "luxon";
 import markdownIt from "markdown-it";
+import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 
 export default async function (eleventyConfig) {
     // Filters
@@ -12,6 +13,20 @@ export default async function (eleventyConfig) {
     // Pass-through
     eleventyConfig.addPassthroughCopy("src/styles");
     eleventyConfig.addPassthroughCopy("src/static");
+
+    // Plugins
+    eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
+        formats: ["avif", "webp", "svg", "jpeg"],
+        widths: [150, 500, "auto"],
+        svgShortCircuit: true,
+        htmlOptions: {
+            imgAttributes: {
+                loading: "lazy",
+                decoding: "async",
+            },
+            pictureAttributes: {}
+        },
+    });
 
     return {
         dir: {
