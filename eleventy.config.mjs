@@ -14,6 +14,7 @@ export default async function (eleventyConfig) {
     // Pass-through
     eleventyConfig.addPassthroughCopy("src/styles");
     eleventyConfig.addPassthroughCopy("src/static");
+    eleventyConfig.addPassthroughCopy("src/robots.txt");
 
     // Plugins
     eleventyConfig.addBundle("css");
