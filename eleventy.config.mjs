@@ -19,7 +19,7 @@ export default async function (eleventyConfig) {
     eleventyConfig.addBundle("css");
     eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
         formats: ["avif", "webp", "svg", "jpeg"],
-        widths: [150, 500, "auto"],
+        widths: [150, 500, 1000, "auto"],
         svgShortCircuit: true,
         htmlOptions: {
             imgAttributes: {
