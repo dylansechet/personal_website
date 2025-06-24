@@ -13,7 +13,7 @@
     <meta property="og:url" content="#">
     <title>{{title}}</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preload" as="style"
+    <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;500;600&display=swap">
     <link rel="stylesheet" href="styles/styles.css">
     {%if analytics%}
@@ -65,7 +65,7 @@
             <div class="news-container">
                 <ul class="news-list">
                     {% for item in news %}
-                    <li>{{ item.date }}: {{ item.text | markdownify }}</li>
+                    <li>{{ item.date }}: {{ item.text | markdownify-inline }}</li>
                     {% endfor %}
                 </ul>
             </div>
