@@ -7,7 +7,9 @@ keywords: "Computer Science, PhD Student, Research, Machine Learning, Music Sour
 og_card:
   title: "Dylan Sechet | PhD Student at LISN"
   # description: "Research in computer science and related fields"
-analytics: <script defer async src="https://umami.seonlabs.org/script.js" data-website-id="97ee5193-4012-4367-aa7c-6730a9706cdc"></script>
+analytics:
+  umami_url: https://umami.seonlabs.org
+  umami_id: 97ee5193-4012-4367-aa7c-6730a9706cdc
 
 name: Dylan Sechet
 affiliation: CS PhD Student • [LISN](https://www.lisn.upsaclay.fr/), Université Paris-Saclay
@@ -26,7 +28,7 @@ about: |
 
 research: |
   My work focuses on building lightweight and explainable neural network for music source separation.
-  I'm exploring topics such as unrolling, time-frequency decompositions and matrix decompositions.
+  I'm exploring topics such as unrolling, time-frequency decompositions and matrix factorization of audio signals.
 
 news:
   - date: "03/25"
@@ -34,7 +36,7 @@ news:
   - date: "09/24"
     text: "I've presented my work on Hierarchical Models for instrument tagging at DAFx."
   - date: "08/24"
-    text: "I've just started work at LISN as a research engineer, building a toolbox for inverse problems in M/EEG."
+    text: "I've just started work at LISN as a research engineer. I'll be building a toolbox for inverse problems in M/EEG."
 
 publications:
   - title: "Revisiting CHAMPAGNE: Sparse Bayesian Learning as Reweighted Sparse Coding"
