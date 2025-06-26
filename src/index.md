@@ -32,9 +32,9 @@ research: |
 
 news:
   - date: "03/25"
-    text: "My paper on Sparse Bayesian learning was accepted at SampTA!"
+    text: "My paper on [Sparse Bayesian Learning](https://arxiv.org/abs/2506.20534v1) has been accepted at [SampTA 2025](https://sampta25.univie.ac.at/) in Vienna."
   - date: "09/24"
-    text: "I've presented my work on Hierarchical Models for instrument tagging at DAFx."
+    text: "I was in Guildford to present my work on Hierarchical Models for instrument tagging at [DAFx24](https://dafx24.surrey.ac.uk/)."
   - date: "08/24"
     text: "I've just started work at LISN as a research engineer. I'll be building a toolbox for inverse problems in M/EEG."
 
